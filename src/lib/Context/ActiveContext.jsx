@@ -1,13 +1,10 @@
 import React, { useState, createContext } from "react";
-
 export const ActiveContext = createContext();
 
 const ActiveContextProvider = ({ children }) => {
   const [activeDateTime, setActiveDateTime] = useState(false);
   const [activeListMonth, setActiveListMonth] = useState(false);
   const [activeListYear, setActiveListYear] = useState(false);
-
-  console.log(activeListYear, activeListMonth);
 
   const displayMonthList = () => {
     setActiveListMonth(!activeListMonth);

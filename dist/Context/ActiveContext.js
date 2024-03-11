@@ -14,7 +14,6 @@ const ActiveContextProvider = ({
   const [activeDateTime, setActiveDateTime] = (0, _react.useState)(false);
   const [activeListMonth, setActiveListMonth] = (0, _react.useState)(false);
   const [activeListYear, setActiveListYear] = (0, _react.useState)(false);
-  console.log(activeListYear, activeListMonth);
   const displayMonthList = () => {
     setActiveListMonth(!activeListMonth);
   };
