@@ -1,5 +1,5 @@
-import ContainerTable from "./Component/ContainerTable/ContainerTable.jsx";
-import ActiveContextProvider from "./Context/ActiveContext.tsx";
+import ContainerTable from "../lib/Component/ContainerTable/ContainerTable.jsx";
+import ActiveContextProvider from "./Context/ActiveContext.jsx";
 import React from "react";
 
 const App = () => {
