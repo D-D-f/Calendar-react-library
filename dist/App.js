@@ -4,8 +4,8 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
-var _ContainerTable = _interopRequireDefault(require("../lib/Component/ContainerTable/ContainerTable.jsx"));
-var _ActiveContext = _interopRequireDefault(require("./Context/ActiveContext.jsx"));
+var _ContainerTable = _interopRequireDefault(require("./ContainerTable.jsx"));
+var _ActiveContext = _interopRequireDefault(require("./ActiveContext.js"));
 var _react = _interopRequireDefault(require("react"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 const App = () => {

@@ -1,13 +1,13 @@
 // @ts-nocheck
-import TableDate from "../../Component/TableDate/TableDate";
-import Selected from "../../Component/Selected/Selected";
+import TableDate from "./TableDate";
+import Selected from "./Selected";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretRight, faCaretLeft } from "@fortawesome/free-solid-svg-icons";
-import calculDateDay from "../../CustomHooks/UseCalculDay";
-import UseCalculDate from "../../CustomHooks/UseCalculDate";
+import calculDateDay from "./UseCalculDay";
+import UseCalculDate from "./UseCalculDate";
 import "./ContainerTable.css";
 import React, { useState, useEffect, useContext } from "react";
-import { ActiveContext } from "../../Context/ActiveContext";
+import { ActiveContext } from "./ActiveContext";
 
 const ContainerTable = () => {
   const {
