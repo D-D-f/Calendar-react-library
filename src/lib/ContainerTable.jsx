@@ -30,7 +30,7 @@ const ContainerTable = () => {
 
   useEffect(() => {
     setChosenDate(() => [currentMonth, years[currentYear]]);
-  }, [currentMonth, currentYear]);
+  }, [currentMonth, currentYear, years]);
 
   const currentDay = `${
     currentDate.getDate() < 10

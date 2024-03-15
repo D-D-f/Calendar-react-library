@@ -40,7 +40,7 @@ const ContainerTable = () => {
   const getFirstDayAndNumbersDays = (0, _UseCalculDay.default)(currentMonth, currentYear, 1);
   (0, _react.useEffect)(() => {
     setChosenDate(() => [currentMonth, years[currentYear]]);
-  }, [currentMonth, currentYear]);
+  }, [currentMonth, currentYear, years]);
   const currentDay = `${currentDate.getDate() < 10 ? `0${currentDate.getDate()}` : `${currentDate.getDate()}`}/${currentDate.getMonth() + 1 < 10 ? `0${currentDate.getMonth() + 1}` : `${currentDate.getMonth() + 1}`}/${currentDate.getFullYear()}`;
   let [monthcurrent, yearcurrent, datecurrent] = [...chosenDate];
   let valueInput = `${datecurrent < 10 ? `0${datecurrent}` : `${datecurrent}`}/${monthcurrent < 10 ? `0${monthcurrent}` : `${monthcurrent}`}/${yearcurrent}`;
