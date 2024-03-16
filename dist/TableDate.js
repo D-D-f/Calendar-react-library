@@ -27,7 +27,9 @@ const TableDate = ({
     rows.push( /*#__PURE__*/_react.default.createElement("tr", {
       key: i / 7
     }, allCase.slice(i, i + 7).map((day, index) => /*#__PURE__*/_react.default.createElement("td", {
-      onClick: e => changeDate(curr => curr.length > 2 ? [...curr.splice(2, 1), Number(e.target.textContent)] : [...curr, Number(e.target.textContent)]),
+      onClick: e => changeDate(() => {
+        return e.target.textContent;
+      }),
       key: index
     }, day !== null ? day : ""))));
   }

@@ -36,14 +36,10 @@ const ContainerTable = () => {
     activeDateTime,
     displayDateTime
   } = (0, _react.useContext)(_ActiveContext.ActiveContext);
-  const [chosenDate, setChosenDate] = (0, _react.useState)([]);
+  const [chosenDate, setChosenDate] = (0, _react.useState)();
   const getFirstDayAndNumbersDays = (0, _UseCalculDay.default)(currentMonth, currentYear, 1);
-  (0, _react.useEffect)(() => {
-    setChosenDate(() => [currentMonth, years[currentYear]]);
-  }, [currentMonth, currentYear, years]);
   const currentDay = `${currentDate.getDate() < 10 ? `0${currentDate.getDate()}` : `${currentDate.getDate()}`}/${currentDate.getMonth() + 1 < 10 ? `0${currentDate.getMonth() + 1}` : `${currentDate.getMonth() + 1}`}/${currentDate.getFullYear()}`;
-  let [monthcurrent, yearcurrent, datecurrent] = [...chosenDate];
-  let valueInput = `${datecurrent < 10 ? `0${datecurrent}` : `${datecurrent}`}/${monthcurrent < 10 ? `0${monthcurrent}` : `${monthcurrent}`}/${yearcurrent}`;
+  let changeDate = `${chosenDate < 10 ? `0${chosenDate}` : `${chosenDate}`}/${currentMonth < 10 ? `0${currentMonth}` : `${currentMonth}`}/${years[currentYear]}`;
   return /*#__PURE__*/_react.default.createElement("div", {
     className: "containerTable"
   }, /*#__PURE__*/_react.default.createElement("input", {
@@ -53,7 +49,7 @@ const ContainerTable = () => {
     type: "text",
     readOnly: true,
     onClick: () => displayDateTime(),
-    value: datecurrent !== undefined ? valueInput : currentDay
+    value: chosenDate === undefined ? currentDay : changeDate
   }), /*#__PURE__*/_react.default.createElement("div", {
     style: activeDateTime ? {
       display: "block"
