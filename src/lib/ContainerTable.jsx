@@ -6,7 +6,7 @@ import { faCaretRight, faCaretLeft } from "@fortawesome/free-solid-svg-icons";
 import calculDateDay from "./UseCalculDay";
 import UseCalculDate from "./UseCalculDate";
 import "./ContainerTable.css";
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useContext } from "react";
 import { ActiveContext } from "./ActiveContext";
 
 const ContainerTable = () => {
@@ -25,12 +25,8 @@ const ContainerTable = () => {
   } = UseCalculDate();
 
   const { activeDateTime, displayDateTime } = useContext(ActiveContext);
-  const [chosenDate, setChosenDate] = useState([]);
+  const [chosenDate, setChosenDate] = useState();
   const getFirstDayAndNumbersDays = calculDateDay(currentMonth, currentYear, 1);
-
-  useEffect(() => {
-    setChosenDate(() => [currentMonth, years[currentYear]]);
-  }, [currentMonth, currentYear, years]);
 
   const currentDay = `${
     currentDate.getDate() < 10
@@ -42,12 +38,9 @@ const ContainerTable = () => {
       : `${currentDate.getMonth() + 1}`
   }/${currentDate.getFullYear()}`;
 
-  let [monthcurrent, yearcurrent, datecurrent] = [...chosenDate];
-  let valueInput = `${
-    datecurrent < 10 ? `0${datecurrent}` : `${datecurrent}`
-  }/${
-    monthcurrent < 10 ? `0${monthcurrent}` : `${monthcurrent}`
-  }/${yearcurrent}`;
+  let changeDate = `${chosenDate < 10 ? `0${chosenDate}` : `${chosenDate}`}/${
+    currentMonth < 10 ? `0${currentMonth}` : `${currentMonth}`
+  }/${years[currentYear]}`;
 
   return (
     <div className="containerTable">
@@ -56,7 +49,7 @@ const ContainerTable = () => {
         type="text"
         readOnly
         onClick={() => displayDateTime()}
-        value={datecurrent !== undefined ? valueInput : currentDay}
+        value={chosenDate === undefined ? currentDay : changeDate}
       />
       <div
         style={activeDateTime ? { display: "block" } : { display: "none" }}

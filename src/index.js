@@ -1,4 +1,9 @@
 import ReactDOM from "react-dom";
 import React from "react";
 import { App } from "./lib";
-ReactDOM.render(<App />, document.getElementById("root"));
+
+const root = document.getElementById("root");
+
+// Utilisation de createRoot() depuis "react-dom/client"
+const rootElement = ReactDOM.createRoot(root);
+rootElement.render(<App />);

@@ -22,11 +22,9 @@ const TableDate = ({ nbDaysAndFirstDayOnTheMonth, changeDate }) => {
         {allCase.slice(i, i + 7).map((day, index) => (
           <td
             onClick={(e) =>
-              changeDate((curr) =>
-                curr.length > 2
-                  ? [...curr.splice(2, 1), Number(e.target.textContent)]
-                  : [...curr, Number(e.target.textContent)]
-              )
+              changeDate(() => {
+                return e.target.textContent;
+              })
             }
             key={index}
           >

@@ -29,6 +29,7 @@ const UseCalculDate = () => {
   const [currentMonth, setCurrentMonth] = useState(
     months.indexOf(months[currentMonths])
   );
+
   const [currentYear, setCurrentYear] = useState(years.indexOf(currentYears));
 
   const incrementMonth = () => {
