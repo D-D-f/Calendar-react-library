@@ -1,5 +1,5 @@
 import React from "react";
-import ContainerTable from "./ContainerTable.jsx";
+import ContainerTable from "./ContainerTable";
 import ActiveContextProvider from "./ActiveContext.js";
 import "./App.css";
 
