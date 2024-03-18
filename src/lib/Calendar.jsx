@@ -1,11 +1,11 @@
 import React from "react";
 import ContainerTable from "./ContainerTable";
 import ActiveContextProvider from "./ActiveContext.js";
-import "./App.css";
+import "./Calendar.css";
 
-const App = () => {
+const Calendar = () => {
   return (
-    <div className="App">
+    <div>
       <ActiveContextProvider>
         <ContainerTable />
       </ActiveContextProvider>
@@ -13,4 +13,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default Calendar;

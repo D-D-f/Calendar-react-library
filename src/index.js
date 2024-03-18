@@ -1,9 +1,10 @@
-import ReactDOM from "react-dom";
+import ReactDOM from "react-dom/client";
 import React from "react";
-import { App } from "./lib";
+import { Calendar } from "./lib";
 
-const root = document.getElementById("root");
-
-// Utilisation de createRoot() depuis "react-dom/client"
-const rootElement = ReactDOM.createRoot(root);
-rootElement.render(<App />);
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(
+  <React.StrictMode>
+    <Calendar />
+  </React.StrictMode>
+);
