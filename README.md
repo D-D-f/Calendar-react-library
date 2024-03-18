@@ -5,7 +5,7 @@ Here's how to use this project in your code:
 With React JS
 
 ```
-import { App } from "simple-calendar-react-library"
+import { Calendar } from "simple-calendar-react-library"
 ```
 
 ## Author
