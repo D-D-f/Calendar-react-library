@@ -7,11 +7,9 @@ exports.default = void 0;
 var _react = _interopRequireDefault(require("react"));
 var _ContainerTable = _interopRequireDefault(require("./ContainerTable"));
 var _ActiveContext = _interopRequireDefault(require("./ActiveContext.js"));
-require("./App.css");
+require("./Calendar.css");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-const App = () => {
-  return /*#__PURE__*/_react.default.createElement("div", {
-    className: "App"
-  }, /*#__PURE__*/_react.default.createElement(_ActiveContext.default, null, /*#__PURE__*/_react.default.createElement(_ContainerTable.default, null)));
+const Calendar = () => {
+  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_ActiveContext.default, null, /*#__PURE__*/_react.default.createElement(_ContainerTable.default, null)));
 };
-var _default = exports.default = App;
+var _default = exports.default = Calendar;

@@ -3,11 +3,11 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-Object.defineProperty(exports, "App", {
+Object.defineProperty(exports, "Calendar", {
   enumerable: true,
   get: function () {
-    return _App.default;
+    return _Calendar.default;
   }
 });
-var _App = _interopRequireDefault(require("./App"));
+var _Calendar = _interopRequireDefault(require("./Calendar"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
