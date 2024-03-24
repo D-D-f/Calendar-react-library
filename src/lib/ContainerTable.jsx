@@ -6,10 +6,10 @@ import { faCaretRight, faCaretLeft } from "@fortawesome/free-solid-svg-icons";
 import calculDateDay from "./UseCalculDay";
 import UseCalculDate from "./UseCalculDate";
 import "./ContainerTable.css";
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useRef } from "react";
 import { ActiveContext } from "./ActiveContext";
 
-const ContainerTable = () => {
+const ContainerTable = ({ onChange }) => {
   const {
     years,
     months,
@@ -26,6 +26,8 @@ const ContainerTable = () => {
 
   const { activeDateTime, displayDateTime } = useContext(ActiveContext);
   const [chosenDate, setChosenDate] = useState();
+  const inputRef = useRef(null);
+
   const getFirstDayAndNumbersDays = calculDateDay(currentMonth, currentYear, 1);
 
   const currentDay = `${
@@ -42,6 +44,12 @@ const ContainerTable = () => {
     currentMonth < 10 ? `0${currentMonth}` : `${currentMonth}`
   }/${years[currentYear]}`;
 
+  const handleInputChange = () => {
+    if (onChange) {
+      onChange(inputRef.current.value);
+    }
+  };
+
   return (
     <div className="containerTable">
       <input
@@ -50,6 +58,7 @@ const ContainerTable = () => {
         readOnly
         onClick={() => displayDateTime()}
         value={chosenDate === undefined ? currentDay : changeDate}
+        onChange={handleInputChange}
       />
       <div
         style={activeDateTime ? { display: "block" } : { display: "none" }}

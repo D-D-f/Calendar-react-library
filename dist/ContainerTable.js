@@ -18,7 +18,9 @@ function _interopRequireWildcard(e, r) { if (!r && e && e.__esModule) return e; 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 // @ts-nocheck
 
-const ContainerTable = () => {
+const ContainerTable = ({
+  onChange
+}) => {
   const {
     years,
     months,
@@ -37,9 +39,15 @@ const ContainerTable = () => {
     displayDateTime
   } = (0, _react.useContext)(_ActiveContext.ActiveContext);
   const [chosenDate, setChosenDate] = (0, _react.useState)();
+  const inputRef = (0, _react.useRef)(null);
   const getFirstDayAndNumbersDays = (0, _UseCalculDay.default)(currentMonth, currentYear, 1);
   const currentDay = `${currentDate.getDate() < 10 ? `0${currentDate.getDate()}` : `${currentDate.getDate()}`}/${currentDate.getMonth() + 1 < 10 ? `0${currentDate.getMonth() + 1}` : `${currentDate.getMonth() + 1}`}/${currentDate.getFullYear()}`;
   let changeDate = `${chosenDate < 10 ? `0${chosenDate}` : `${chosenDate}`}/${currentMonth < 10 ? `0${currentMonth}` : `${currentMonth}`}/${years[currentYear]}`;
+  const handleInputChange = () => {
+    if (onChange) {
+      onChange(inputRef.current.value);
+    }
+  };
   return /*#__PURE__*/_react.default.createElement("div", {
     className: "containerTable"
   }, /*#__PURE__*/_react.default.createElement("input", {
@@ -49,7 +57,8 @@ const ContainerTable = () => {
     type: "text",
     readOnly: true,
     onClick: () => displayDateTime(),
-    value: chosenDate === undefined ? currentDay : changeDate
+    value: chosenDate === undefined ? currentDay : changeDate,
+    onChange: handleInputChange
   }), /*#__PURE__*/_react.default.createElement("div", {
     style: activeDateTime ? {
       display: "block"
