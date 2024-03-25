@@ -50,6 +50,7 @@ const ContainerTable = ({
       width: "100%"
     },
     type: "text",
+    readOnly: true,
     onClick: () => displayDateTime(),
     value: chosenDate === undefined ? currentDay : changeDate
   }), /*#__PURE__*/_react.default.createElement("div", {

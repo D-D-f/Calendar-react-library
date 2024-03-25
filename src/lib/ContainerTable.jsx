@@ -50,6 +50,7 @@ const ContainerTable = ({ onChange }) => {
       <input
         style={{ width: "100%" }}
         type="text"
+        readOnly
         onClick={() => displayDateTime()}
         value={chosenDate === undefined ? currentDay : changeDate}
       />

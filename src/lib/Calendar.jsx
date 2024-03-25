@@ -3,17 +3,11 @@ import ContainerTable from "./ContainerTable";
 import ActiveContextProvider from "./ActiveContext.js";
 import "./Calendar.css";
 
-export let dateChange;
-
-const Calendar = () => {
-  const handleChange = (date) => {
-    dateChange = date;
-  };
-
+const Calendar = ({ handleChangeDate }) => {
   return (
     <div>
       <ActiveContextProvider>
-        <ContainerTable onChange={handleChange} />
+        <ContainerTable onChange={handleChangeDate} />
       </ActiveContextProvider>
     </div>
   );
