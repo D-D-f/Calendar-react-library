@@ -3,11 +3,18 @@ import ContainerTable from "./ContainerTable";
 import ActiveContextProvider from "./ActiveContext.js";
 import "./Calendar.css";
 
-const Calendar = ({ handleChangeDate }) => {
+const Calendar = () => {
+  const handleChangeDate = (e) => {
+    console.log(e);
+  };
   return (
     <div>
       <ActiveContextProvider>
-        <ContainerTable onChange={handleChangeDate} />
+        <ContainerTable
+          onChange={handleChangeDate}
+          attributNameInput="test"
+          nameLabel={"test"}
+        />
       </ActiveContextProvider>
     </div>
   );

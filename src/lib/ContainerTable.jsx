@@ -9,7 +9,7 @@ import "./ContainerTable.css";
 import React, { useState, useContext } from "react";
 import { ActiveContext } from "./ActiveContext";
 
-const ContainerTable = ({ onChange }) => {
+const ContainerTable = ({ onChange, nameLabel, attributNameInput }) => {
   const {
     years,
     months,
@@ -47,12 +47,16 @@ const ContainerTable = ({ onChange }) => {
 
   return (
     <div className="containerTable">
+      <label onClick={() => displayDateTime()} htmlFor={attributNameInput}>
+        {nameLabel}
+      </label>
       <input
         style={{ width: "100%" }}
         type="text"
         readOnly
         onClick={() => displayDateTime()}
-        value={chosenDate === undefined ? currentDay : changeDate}
+        value={chosenDate === undefined ? "" : changeDate}
+        name={attributNameInput}
       />
       <div
         style={activeDateTime ? { display: "block" } : { display: "none" }}
