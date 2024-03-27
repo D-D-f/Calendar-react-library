@@ -10,10 +10,14 @@ var _ActiveContext = _interopRequireDefault(require("./ActiveContext.js"));
 require("./Calendar.css");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 const Calendar = ({
-  handleChangeDate
+  handleChangeDate,
+  attributNameInput,
+  nameLabel
 }) => {
   return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_ActiveContext.default, null, /*#__PURE__*/_react.default.createElement(_ContainerTable.default, {
-    onChange: handleChangeDate
+    onChange: handleChangeDate,
+    attributNameInput: attributNameInput,
+    nameLabel: nameLabel
   })));
 };
 var _default = exports.default = Calendar;

@@ -1,4 +1,3 @@
-import React from "react";
 import "./TableDate.css";
 
 const TableDate = ({ nbDaysAndFirstDayOnTheMonth, changeDate }) => {
@@ -21,11 +20,11 @@ const TableDate = ({ nbDaysAndFirstDayOnTheMonth, changeDate }) => {
       <tr key={i / 7}>
         {allCase.slice(i, i + 7).map((day, index) => (
           <td
-            onClick={(e) =>
+            onClick={(e) => {
               changeDate(() => {
                 return e.target.textContent;
-              })
-            }
+              });
+            }}
             key={index}
           >
             {day !== null ? day : ""}

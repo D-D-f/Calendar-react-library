@@ -19,7 +19,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 // @ts-nocheck
 
 const ContainerTable = ({
-  onChange
+  onChange,
+  nameLabel,
+  attributNameInput
 }) => {
   const {
     years,
@@ -45,14 +47,18 @@ const ContainerTable = ({
   onChange(chosenDate === undefined ? currentDay : changeDate);
   return /*#__PURE__*/_react.default.createElement("div", {
     className: "containerTable"
-  }, /*#__PURE__*/_react.default.createElement("input", {
+  }, /*#__PURE__*/_react.default.createElement("label", {
+    onClick: () => displayDateTime(),
+    htmlFor: attributNameInput
+  }, nameLabel), /*#__PURE__*/_react.default.createElement("input", {
     style: {
       width: "100%"
     },
     type: "text",
     readOnly: true,
     onClick: () => displayDateTime(),
-    value: chosenDate === undefined ? currentDay : changeDate
+    value: chosenDate === undefined ? "" : changeDate,
+    name: attributNameInput
   }), /*#__PURE__*/_react.default.createElement("div", {
     style: activeDateTime ? {
       display: "block"
