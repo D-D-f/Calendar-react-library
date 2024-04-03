@@ -6,8 +6,8 @@ import {
   faCaretLeft,
   faHouseChimney,
 } from "@fortawesome/free-solid-svg-icons";
-import List from "./component/List/List.jsx";
-import TableDate from "./component/TableDate/TableDate.jsx";
+import List from "./component/List/List";
+import TableDate from "./component/TableDate/TableDate";
 import "./Calendar.css";
 
 const Calendar = ({ getDate, langage }) => {

@@ -8,8 +8,8 @@ var _react = _interopRequireWildcard(require("react"));
 var _DateCurrentContext = require("./DateCurrentContext");
 var _reactFontawesome = require("@fortawesome/react-fontawesome");
 var _freeSolidSvgIcons = require("@fortawesome/free-solid-svg-icons");
-var _List = _interopRequireDefault(require("./component/List/List.jsx"));
-var _TableDate = _interopRequireDefault(require("./component/TableDate/TableDate.jsx"));
+var _List = _interopRequireDefault(require("./component/List/List"));
+var _TableDate = _interopRequireDefault(require("./component/TableDate/TableDate"));
 require("./Calendar.css");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 function _getRequireWildcardCache(e) { if ("function" != typeof WeakMap) return null; var r = new WeakMap(), t = new WeakMap(); return (_getRequireWildcardCache = function (e) { return e ? t : r; })(e); }
