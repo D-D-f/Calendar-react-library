@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { ActiveContext } from "./DateCurrentContext.jsx";
+import { ActiveContext } from "./DateCurrentContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCaretRight,

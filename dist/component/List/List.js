@@ -5,9 +5,9 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 var _react = _interopRequireWildcard(require("react"));
-var _GetDate = require("../../GetDate.ts");
+var _GetDate = require("../../GetDate");
 var _reactFontawesome = require("@fortawesome/react-fontawesome");
-var _DateCurrentContext = require("../../DateCurrentContext.tsx");
+var _DateCurrentContext = require("../../DateCurrentContext");
 var _freeSolidSvgIcons = require("@fortawesome/free-solid-svg-icons");
 require("./List.css");
 function _getRequireWildcardCache(e) { if ("function" != typeof WeakMap) return null; var r = new WeakMap(), t = new WeakMap(); return (_getRequireWildcardCache = function (e) { return e ? t : r; })(e); }

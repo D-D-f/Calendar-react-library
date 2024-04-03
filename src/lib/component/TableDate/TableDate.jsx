@@ -1,11 +1,11 @@
 import "./TableDate.css";
 import React, { useContext, useState } from "react";
-import { ActiveContext } from "../../DateCurrentContext.tsx";
+import { ActiveContext } from "../../DateCurrentContext";
 import {
   GetFirstDayAndTheMonth,
   daysInMonth,
   GetCurrentDate,
-} from "../../GetDate.js";
+} from "../../GetDate";
 
 const TableDate = ({ getDate, langage }) => {
   const context = useContext(ActiveContext);

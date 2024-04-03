@@ -5,7 +5,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 var _react = _interopRequireWildcard(require("react"));
-var _DateCurrentContext = require("./DateCurrentContext.jsx");
+var _DateCurrentContext = require("./DateCurrentContext");
 var _reactFontawesome = require("@fortawesome/react-fontawesome");
 var _freeSolidSvgIcons = require("@fortawesome/free-solid-svg-icons");
 var _List = _interopRequireDefault(require("./component/List/List.jsx"));

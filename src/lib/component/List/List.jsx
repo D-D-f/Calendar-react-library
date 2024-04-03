@@ -1,7 +1,7 @@
 import React, { useState, useContext } from "react";
-import { GetCurrentDate } from "../../GetDate.ts";
+import { GetCurrentDate } from "../../GetDate";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { ActiveContext } from "../../DateCurrentContext.tsx";
+import { ActiveContext } from "../../DateCurrentContext";
 import { faSortDown } from "@fortawesome/free-solid-svg-icons";
 import "./List.css";
 

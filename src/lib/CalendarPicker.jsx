@@ -1,6 +1,6 @@
 import React from "react";
-import Calendar from "./Calendar.tsx";
-import DateCurrentContextProvider from "./DateCurrentContext.tsx";
+import Calendar from "./Calendar";
+import DateCurrentContextProvider from "./DateCurrentContext";
 
 const CalendarPicker = ({ getDate, langage }) => {
   return (

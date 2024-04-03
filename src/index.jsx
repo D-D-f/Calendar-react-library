@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import CalendarPicker from "./lib/CalendarPicker.jsx";
+import CalendarPicker from "./lib/CalendarPicker";
 
 const handleDateSelect = (selectedDate) => {
   return selectedDate;
