@@ -1,0 +1,21 @@
+table,
+th,
+td {
+  padding: 10px;
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+table {
+  width: 100%;
+}
+
+thead tr th {
+  background: #999;
+  user-select: none;
+}
+
+.td_date {
+  text-align: center;
+  cursor: pointer;
+}
