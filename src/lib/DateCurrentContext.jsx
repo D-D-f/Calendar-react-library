@@ -1,5 +1,5 @@
 import React, { useState, createContext } from "react";
-import allMonths from "../../public/date.json";
+import allMonths from "./date.json";
 
 export const ActiveContext = createContext(undefined);
 
