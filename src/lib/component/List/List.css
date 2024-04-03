@@ -1,0 +1,40 @@
+.list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    position: relative;
+}
+
+.active {
+    height: 100px;
+    display: block;
+    list-style: none;
+    border: 1px solid black;
+    padding: 0 5px;
+    margin: 10px;
+    overflow-y: scroll;
+    width: calc(100px - 5px);
+    position: absolute;
+    top: 15px;
+    background: white;
+}
+
+.header_list {
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    cursor: pointer;
+}
+
+.active li {
+    line-height: 20px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.not-active {
+    display: none;
+}
