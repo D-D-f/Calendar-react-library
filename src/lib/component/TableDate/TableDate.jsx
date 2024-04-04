@@ -37,12 +37,18 @@ const TableDate = ({ getDate, langage }) => {
 
   const handleDayClick = (day) => {
     setSelectedDay(day);
+    const date =
+      langage === "fr"
+        ? `${day < 10 ? `0${day}` : day}/${
+            userChosenMonth < 10 ? `0${userChosenMonth}` : userChosenMonth
+          }/${allYears[userChosenYear]}`
+        : `${allYears[userChosenYear]}/${
+            userChosenMonth < 10 ? `0${userChosenMonth}` : userChosenMonth
+          }/${day < 10 ? `0${day}` : day}/${
+            userChosenMonth < 10 ? `0${userChosenMonth}` : userChosenMonth
+          }`;
+    getDate(date);
   };
-
-  const date =
-    langage === "fr"
-      ? `${selectedDay}/${userChosenMonth}/${allYears[userChosenYear]}`
-      : `${allYears[userChosenYear]}/${userChosenMonth}/${selectedDay}`;
 
   const rows = [];
   for (let i = 0; i < caseTable.length; i += 7) {
@@ -54,7 +60,6 @@ const TableDate = ({ getDate, langage }) => {
             key={index}
             onClick={() => {
               handleDayClick(day);
-              getDate(date);
             }}
             style={{
               backgroundColor: day === selectedDay ? "lightblue" : "",
