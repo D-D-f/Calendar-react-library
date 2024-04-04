@@ -42,9 +42,7 @@ const TableDate = ({ getDate, langage }) => {
   const date =
     langage === "fr"
       ? `${selectedDay}/${userChosenMonth}/${allYears[userChosenYear]}`
-      : `${userChosenMonth}/${selectedDay}/${allYears[userChosenYear]}`;
-
-  getDate(date);
+      : `${allYears[userChosenYear]}/${userChosenMonth}/${selectedDay}`;
 
   const rows = [];
   for (let i = 0; i < caseTable.length; i += 7) {
@@ -56,6 +54,7 @@ const TableDate = ({ getDate, langage }) => {
             key={index}
             onClick={() => {
               handleDayClick(day);
+              getDate(date);
             }}
             style={{
               backgroundColor: day === selectedDay ? "lightblue" : "",
