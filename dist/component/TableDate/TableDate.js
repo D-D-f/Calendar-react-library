@@ -37,7 +37,7 @@ const TableDate = ({
   }
   const handleDayClick = day => {
     setSelectedDay(day);
-    const date = langage === "fr" ? `${day < 10 ? `0${day}` : day}/${userChosenMonth < 10 ? `0${userChosenMonth}` : userChosenMonth}/${allYears[userChosenYear]}` : `${allYears[userChosenYear]}/${userChosenMonth < 10 ? `0${userChosenMonth}` : userChosenMonth}/${day < 10 ? `0${day}` : day}/${userChosenMonth < 10 ? `0${userChosenMonth}` : userChosenMonth}`;
+    const date = langage === "fr" ? `${day < 10 ? `0${day}` : day}/${userChosenMonth < 10 ? `0${userChosenMonth + 1}` : userChosenMonth + 1}/${allYears[userChosenYear]}` : `${allYears[userChosenYear]}/${userChosenMonth < 10 ? `0${userChosenMonth + 1}` : userChosenMonth + 1}/${day < 10 ? `0${day}` : day}/${userChosenMonth < 10 ? `0${userChosenMonth + 1}` : userChosenMonth + 1}`;
     getDate(date);
   };
   const rows = [];
@@ -57,7 +57,13 @@ const TableDate = ({
       }
     }, day !== null ? day : ""))));
   }
-  return /*#__PURE__*/_react.default.createElement("table", null, /*#__PURE__*/_react.default.createElement("thead", null, /*#__PURE__*/_react.default.createElement("tr", null, /*#__PURE__*/_react.default.createElement("th", {
+  return /*#__PURE__*/_react.default.createElement("table", {
+    className: "table-1"
+  }, /*#__PURE__*/_react.default.createElement("thead", {
+    className: "table-1-thead"
+  }, /*#__PURE__*/_react.default.createElement("tr", {
+    className: "table-1-tr"
+  }, /*#__PURE__*/_react.default.createElement("th", {
     scope: "col"
   }, "Mon"), /*#__PURE__*/_react.default.createElement("th", {
     scope: "col"

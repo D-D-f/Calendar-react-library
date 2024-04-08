@@ -1,16 +1,16 @@
-table,
-th,
-td {
+.table-1,
+.table-1-thead,
+.table-1-tr {
   padding: 10px;
   border: 1px solid black;
   border-collapse: collapse;
 }
 
-table {
+.table-1 {
   width: 100%;
 }
 
-thead tr th {
+.table-1-thead .table-1-tr th {
   background: #999;
   user-select: none;
 }

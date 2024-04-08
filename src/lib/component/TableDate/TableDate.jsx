@@ -40,12 +40,18 @@ const TableDate = ({ getDate, langage }) => {
     const date =
       langage === "fr"
         ? `${day < 10 ? `0${day}` : day}/${
-            userChosenMonth < 10 ? `0${userChosenMonth}` : userChosenMonth
+            userChosenMonth < 10
+              ? `0${userChosenMonth + 1}`
+              : userChosenMonth + 1
           }/${allYears[userChosenYear]}`
         : `${allYears[userChosenYear]}/${
-            userChosenMonth < 10 ? `0${userChosenMonth}` : userChosenMonth
+            userChosenMonth < 10
+              ? `0${userChosenMonth + 1}`
+              : userChosenMonth + 1
           }/${day < 10 ? `0${day}` : day}/${
-            userChosenMonth < 10 ? `0${userChosenMonth}` : userChosenMonth
+            userChosenMonth < 10
+              ? `0${userChosenMonth + 1}`
+              : userChosenMonth + 1
           }`;
     getDate(date);
   };
@@ -83,9 +89,9 @@ const TableDate = ({ getDate, langage }) => {
   }
 
   return (
-    <table>
-      <thead>
-        <tr>
+    <table className="table-1">
+      <thead className="table-1-thead">
+        <tr className="table-1-tr">
           <th scope="col">Mon</th>
           <th scope="col">Tue</th>
           <th scope="col">Wed</th>
