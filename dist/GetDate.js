@@ -19,10 +19,12 @@ const GetCurrentDate = () => {
   const currentMonth = getCurrentDate.getMonth();
   const currentDay = getCurrentDate.getDay();
   const currentYear = getCurrentDate.getFullYear();
+  const currentDate = getCurrentDate.getDate();
   return {
     currentDay,
     currentMonth,
-    currentYear
+    currentYear,
+    currentDate
   };
 };
 exports.GetCurrentDate = GetCurrentDate;

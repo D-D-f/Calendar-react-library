@@ -16,6 +16,7 @@ const TableDate = ({ getDate, langage }) => {
     userChosenMonth,
     1
   );
+
   const currentDate = GetCurrentDate();
 
   const nbDaysInMonth = daysInMonth(userChosenMonth, allYears[userChosenYear]);
@@ -71,12 +72,12 @@ const TableDate = ({ getDate, langage }) => {
               backgroundColor: day === selectedDay ? "lightblue" : "",
               color:
                 userChosenMonth === currentDate.currentMonth &&
-                day === currentDate.currentDay
+                day === currentDate.currentDate
                   ? "red"
                   : "black",
               fontWeight:
                 userChosenMonth === currentDate.currentMonth &&
-                day === currentDate.currentDay
+                day === currentDate.currentDate
                   ? "bold"
                   : "normal",
             }}

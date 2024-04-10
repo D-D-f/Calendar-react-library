@@ -52,8 +52,8 @@ const TableDate = ({
       },
       style: {
         backgroundColor: day === selectedDay ? "lightblue" : "",
-        color: userChosenMonth === currentDate.currentMonth && day === currentDate.currentDay ? "red" : "black",
-        fontWeight: userChosenMonth === currentDate.currentMonth && day === currentDate.currentDay ? "bold" : "normal"
+        color: userChosenMonth === currentDate.currentMonth && day === currentDate.currentDate ? "red" : "black",
+        fontWeight: userChosenMonth === currentDate.currentMonth && day === currentDate.currentDate ? "bold" : "normal"
       }
     }, day !== null ? day : ""))));
   }

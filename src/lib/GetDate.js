@@ -14,8 +14,9 @@ export const GetCurrentDate = () => {
   const currentMonth = getCurrentDate.getMonth();
   const currentDay = getCurrentDate.getDay();
   const currentYear = getCurrentDate.getFullYear();
+  const currentDate = getCurrentDate.getDate();
 
-  return { currentDay, currentMonth, currentYear };
+  return { currentDay, currentMonth, currentYear, currentDate };
 };
 
 export const daysInMonth = (indexMonth, year) => {
