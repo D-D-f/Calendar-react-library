@@ -37,7 +37,7 @@ const TableDate = ({
   }
   const handleDayClick = day => {
     setSelectedDay(day);
-    const date = langage === "fr" ? `${day < 10 ? `0${day}` : day}/${userChosenMonth < 10 ? `0${userChosenMonth + 1}` : userChosenMonth + 1}/${allYears[userChosenYear]}` : `${allYears[userChosenYear]}/${userChosenMonth < 10 ? `0${userChosenMonth + 1}` : userChosenMonth + 1}/${day < 10 ? `0${day}` : day}/${userChosenMonth < 10 ? `0${userChosenMonth + 1}` : userChosenMonth + 1}`;
+    const date = langage === "fr" ? `${day < 10 ? `0${day}` : day}/${userChosenMonth + 1 < 10 ? `0${userChosenMonth + 1}` : userChosenMonth + 1}/${allYears[userChosenYear]}` : `${allYears[userChosenYear]}/${userChosenMonth + 1 < 10 ? `0${userChosenMonth + 1}` : userChosenMonth + 1}/${day < 10 ? `0${day}` : day}`;
     getDate(date);
   };
   const rows = [];

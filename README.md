@@ -1,86 +1,33 @@
-# react-calendar-input
+# simple-calendar-react-library
 
-## Overview
+## What is it for?
 
-react-calendar-input is a React library for displaying a calendar with an input field. This library allows users to easily select a date and provides a callback function to retrieve the selected date value.
+This library allows you to obtain a calendar, where you can define a start and end year. When clicking on a date, through a function, it returns the date in French or English format.
 
-## Installation
+## How to use it?
 
-You can install react-calendar-input via npm or yarn:
+### Installation is simple, here's the command to run to install it with npm:
 
 ```bash
 npm install simple-react-calendar-input
-``` 
-```javascript
-import React, { useState } from 'react';
-import Calendar from 'react-calendar-input';
-
-const MyComponent = () => {
-  const [selectedDate, setSelectedDate] = useState(null);
-
-  const handleDateChange = (date) => {
-    setSelectedDate(date);
-    console.log('Selected date:', date);
-  };
-
-  return (
-    <div>
-      <h1>My Calendar</h1>
-      <Calendar
-        attributeNameInput="dateInput"
-        nameLabel="Date"
-        onChange={handleDateChange}
-      />
-    </div>
-  );
-};
-
-export default MyComponent;
 ```
 
-## Props
-* attributeNameInput (string, required): The name attribute for the input field.
-* nameLabel (string, required): The label for the input field.
-* onChange (function, required): A callback function that receives the selected date value as a parameter.
-
-## TableDate Component
-
-The `TableDate` component is a React component designed to display a calendar table for selecting dates. It is typically used in conjunction with other components to create a date picker or calendar view within a web application.
-
-## Overview
-
-The `TableDate` component accepts two props:
-
-- `getDate`: A callback function that receives the selected date value as a parameter. This function is called whenever a date is clicked in the calendar.
-- `langage`: A string indicating the language used for date formatting. Currently supports "fr" for French and default behavior for other languages.
-
-## Functionality
-
-- The component dynamically generates a calendar table based on the user-selected month and year.
-- Users can click on any date within the calendar to select it.
-- The selected date is highlighted, and its value is passed back to the parent component through the `getDate` callback function.
-
-## Usage
+- Then, to import it:
 
 ```javascript
-import React from 'react';
-import TableDate from './TableDate';
-
-const MyComponent = () => {
-  const handleDateSelection = (date) => {
-    console.log('Selected date:', date);
-  };
-
-  return (
-    <div>
-      <h1>Calendar</h1>
-      <TableDate getDate={handleDateSelection} langage="fr" />
-    </div>
-  );
-};
-
-export default MyComponent;
+    import { CalendarPicker } from "simple-calendar-react-library";
 ```
+
+- Using the CalendarPicker component:
+
+```javascript
+    <CalendarPicker getDate={getDateBirthday} language="fr" start={1950} end={2024} />
+```
+
+* The getDate prop expects a function, with the event as a parameter, which will retrieve the date value.
+* The language prop expects the chosen format, "fr" or "eng".
+* The start prop allows you to choose the starting year of the calendar.
+* The end prop allows you to choose the last year.
 
 ## Author
 DAVID DE FREITAS
